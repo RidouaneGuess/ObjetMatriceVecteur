@@ -58,5 +58,5 @@ Matrice::~Matrice()
 {
 	for(int i=0;i<ligne;i++)
 		delete tab[i];
-	delete tab;
+	delete[] tab;
 }
