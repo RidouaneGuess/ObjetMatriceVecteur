@@ -10,8 +10,10 @@ class Matrice
 	Matrice(int,int);
 	void Afficher();
 	void Saisie();
-	Matrice Somme(Matrice);
-	Vecteur Produit(Vecteur);
+	//Matrice Somme(Matrice);
+	Matrice operator+(Matrice);
+	//Vecteur Produit(Vecteur);
+	Vecteur operator*(Vecteur);
 	~Matrice();
 };
 #endif

@@ -19,7 +19,8 @@ int main()
 	cout<<"Affichage de V:"<<endl;
 	V1.Afficher();
 	cout<<"V2=A*V1:"<<endl;
-	V2=A.Produit(V1);
+	//V2=A.Produit(V1);
+	V2=A*V1;
 	cout<<"Affichage de V2:"<<endl;
 	V2.Afficher();
 	return 0;

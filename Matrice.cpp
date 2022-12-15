@@ -24,7 +24,7 @@ void Matrice::Afficher()
 	for(int i=0;i<ligne;i++)
                 for(int j=0;j<colonne;j++)
                         cout<<"\t"<<tab[i][j]<<endl;
-}
+}/*
 Matrice Matrice::Somme(Matrice A)
 {
 	Matrice S(ligne,colonne);
@@ -32,13 +32,28 @@ Matrice Matrice::Somme(Matrice A)
                 for(int j=0;j<colonne;j++)
                         S.tab[i][j]=tab[i][j]+A.tab[i][j];
 	return S;
+}*/
+Matrice Matrice::operator+(Matrice A)
+{
+	Matrice S(ligne,colonne);
+        for(int i=0;i<ligne;i++)
+                for(int j=0;j<colonne;j++)
+                        S.tab[i][j]=tab[i][j]+A.tab[i][j];                                                          return S;
 }
+Vecteur Matrice::operator*(Vecteur V)
+{
+	Vecteur P(V.taille);                                  for(int i=0;i<ligne;i++)                                      for(int j=0;j<colonne;j++)                                    P.tab[i]=P.tab[i]+tab[i][j]*V.
+tab[j];    
+	return P;
+}
+
+/*
 Vecteur Matrice::Produit(Vecteur V)
 {
         Vecteur P(V.taille);
         for(int i=0;i<ligne;i++)
                 for(int j=0;j<colonne;j++)                                    P.tab[i]=P.tab[i]+tab[i][j]*V.tab[j];             return P;
-}
+}*/
 Matrice::~Matrice()
 {
 	for(int i=0;i<ligne;i++)
